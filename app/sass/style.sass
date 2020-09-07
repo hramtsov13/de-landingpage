@@ -51,6 +51,7 @@ $primary-color: #1F3F68
     height: 32px
 
   .burger__button
+    cursor: pointer
     width: 24px
     height: 16px
 
@@ -104,20 +105,25 @@ $primary-color: #1F3F68
 
   .offer__right .offer__card:first-child
     margin-bottom: 100px
+    position: relative
+    .card__image
+      position: absolute
+      top: -1.5rem
+    .card__description
+      padding-top: 218px
 
   .offer__card
     display: flex
     flex-direction: column
     justify-content: center
-    align-items: flex-start
+    align-items: center
     margin-left: 100px
-    padding: 46px
+    padding: 48px
     background: #FFFFFF
     box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2)
     border-radius: 10px
 
     .card__image
-      margin-left: 1.625rem
       margin-bottom: 3.5rem
 
     .card__description
@@ -156,6 +162,65 @@ $primary-color: #1F3F68
           height: 1rem
         &:hover
           color: #3179b8
+
+.fb
+  background: #5A98D0
+  border-radius: 200px 0px 0px 0px
+
+  .feedback
+    padding: 96px 0 125px
+    .feedback__info
+      display: flex
+      margin-bottom: 6.9375rem
+      .info__header
+        margin-right: 87px
+        color: #FFFFFF
+        font-weight: 500
+        font-size: 2.25rem
+        line-height: 2.875rem
+        letter-spacing: 0.05em
+      .info__description
+        margin-right: 80px
+        max-width: 540px
+        color: #FFFFFF
+        opacity: 0.6
+        line-height: 1.625rem
+        letter-spacing: 0.05em
+
+    .feedback__client
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      width: 100%
+      flex-wrap: wrap
+      .client__box
+        white-space: nowrap
+        width: 25%
+        border-right: 1px solid #ffffff
+        padding: 41px 46px
+        &:nth-child(-n+4)
+          border-bottom: 1px solid #ffffff
+        &:nth-child(4n)
+          border-right: none
+        &:last-child
+          text-align: center
+          background: rgba(31,63,104, 0.2)
+          button
+            cursor: pointer
+            border: none
+            background: transparent
+            font-weight: 500
+            &:hover
+              transition: 0.5s
+              transform: scale(1.05)
+
+        span,
+        button
+          font-size: 1.25rem
+          line-height: 2.875rem
+          letter-spacing: 0.02em
+          color: #F2F2F2
+          font-weight: 500
 
 @font-face
   font-family: Gilroy
