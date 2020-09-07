@@ -222,6 +222,90 @@ $primary-color: #1F3F68
           color: #F2F2F2
           font-weight: 500
 
+.footer__wrapper
+  max-width: 860px
+  margin: 0 auto 0 0
+
+.footer
+  background: #5A98D0
+  .footer-2
+    margin: 0 7% 0 0
+    background: #316099
+    border-radius: 0px 200px 0px 0px
+    .footer__job
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-top: 5.6875rem
+      padding-bottom: 6rem
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+      .job__offer
+        width: 55%
+        display: flex
+        flex-direction: column
+
+        .offer__header
+          margin-bottom: 2rem
+          font-size: 2.25rem
+          font-weight: 500
+          line-height: 2.875rem
+          letter-spacing: 0.05em
+          color: #ffffff
+        .offer__description
+          line-height: 1.625rem
+          letter-spacing: 0.05em
+          color: #FFFFFF
+          opacity: 0.6
+      .job__button
+        padding: 0.9375rem 4.625rem
+
+    .footer__contacts
+      padding: 6rem 0 4rem
+      display: flex
+      justify-content: flex-start
+      align-items: flex-start
+      color: #FFFFFF
+
+      a
+        color: #ffffff
+        text-decoration: none
+      .contacts__info,
+      .contacts__about,
+      .contacts__social
+        display: flex
+        flex-direction: column
+
+      .contacts__info
+        margin-right: 6.25rem
+        .info__header
+          margin-bottom: 2.0625rem
+          font-size: 1.75rem
+          line-height: 2.875rem
+          letter-spacing: 0.02em
+        .info__item
+          display: inline-block
+          margin-left: 1rem
+          margin-bottom: 1.5rem
+          vertical-align: top
+          font-weight: 300
+
+      .contacts__about
+        margin-right: 4.8125rem
+
+      .about__header,
+      .social__header
+        margin-bottom: 2rem
+        font-weight: 400
+        font-size: 1.25rem
+        line-height: 1.875rem
+        letter-spacing: 0.05em
+
+      a
+        margin-bottom: 1rem
+        font-weight: 300
+        &:hover
+          color: rgba(255, 255, 255, 0.6)
+
 @font-face
   font-family: Gilroy
   font-style: bold
@@ -239,6 +323,12 @@ $primary-color: #1F3F68
   font-style: semibold
   font-weight: 500
   src: url("./../fonts/Gilroy/Gilroy-SemiBold.ttf")
+
+@font-face
+  font-family: Gilroy
+  font-style: light
+  font-weight: 300
+  src: url("./../fonts/Gilroy/Gilroy-Light.ttf")
 
 @font-face
   font-family: Galien
