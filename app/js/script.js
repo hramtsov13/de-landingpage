@@ -1,23 +1,18 @@
-let popup = document.querySelector(".popup");
+let modal = document.getElementById("modal-contact");
+let btn = document.getElementById("form-button");
 
-var showPopup = document.querySelector(".main__button");
+function closeModal() {
+  modal.classList.toggle("disable"); //close by click in any place
+  document.querySelector("body").style.overflow = "auto"; //page scroll
+}
 
-showPopup.onclick = function () {
-  popup.classList.toggle("clicked");
-};
+btn.addEventListener("click", function () {
+  modal.classList.toggle("disable"); //show modal
+  document.querySelector("body").style.overflow = "hidden"; //page scroll
+});
 
-let closeButton = document.querySelector(".close-popup");
-
-closeButton.onclick = function () {
-  popup.classList.remove("clicked");
-};
-
-//burger
-
-let burger = document.getElementById("header__burger");
-
-let burgerList = document.getElementById("header__body");
-
-burger.onclick = function () {
-  burgerList.classList.toggle("show");
-};
+window.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+});

@@ -47,19 +47,22 @@ $primary-color: #1F3F68
     display: block
 
   .logo__image
-    width: 48px
-    height: 32px
+    width: 3rem
+    height: 2rem
 
   .burger__button
     cursor: pointer
-    width: 24px
-    height: 16px
+    width: 1.5rem
+    height: 1rem
 
 //main section
 .hero
   background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152, 195, 232, 0.2) 31.12%)
   .main
-    padding: 101px 0 190px
+    padding: 110px 0 190px
+    display: flex
+    justify-content: flex-start
+    align-content: center
     background: url("../img/main/main-image.svg") no-repeat
     background-size: 50%
     background-position: 100% 0%
@@ -224,12 +227,12 @@ $primary-color: #1F3F68
 
 .footer__wrapper
   max-width: 860px
-  margin: 0 auto 0 0
+  margin: 0 auto
 
-.footer
+.footer-background
   background: #5A98D0
-  .footer-2
-    margin: 0 7% 0 0
+  .footer
+    margin-right: 6rem
     background: #316099
     border-radius: 0px 200px 0px 0px
     .footer__job
@@ -282,6 +285,10 @@ $primary-color: #1F3F68
           font-size: 1.75rem
           line-height: 2.875rem
           letter-spacing: 0.02em
+          img
+            vertical-align: middle
+        span
+          font-weight: 500
         .info__item
           display: inline-block
           margin-left: 1rem
@@ -306,6 +313,324 @@ $primary-color: #1F3F68
         &:hover
           color: rgba(255, 255, 255, 0.6)
 
+//modal
+
+.modal__contact
+  display: block
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 1
+  background-color: rgba(51, 51, 51, 0.6)
+  overflow: auto
+
+  .contact
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    .contact__form
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      padding: 2rem
+      border-radius: 8px
+      background-color: #ffffff
+
+      .form__header
+        margin-bottom: 1.5rem
+        font-size: 1.25rem
+        line-height: 1.875rem
+        letter-spacing: 0.04em
+        color: #1F3F68
+
+      .form__item
+        display: flex
+        flex-direction: column
+        margin-bottom: 1rem
+        &:last-of-type
+          margin-bottom: 2.5rem
+
+      & label
+        color: #1F3F68
+        line-height: 1.875rem
+        opacity: 0.8
+        margin-bottom: 0.5rem
+
+      .form__input
+        width: 21.75rem
+        padding: 0.5rem 2.25rem
+        opacity: 0.4
+        border: 1px solid #356EAD
+        box-sizing: border-box
+        border-radius: 10px
+        font-family: "Gilroy", sans-serif
+        line-height: 1.875rem
+        outline: none
+        &:last-of-type
+          resize: none
+        textarea
+
+    &::-webkit-input-placeholder
+      color: #1F3F68
+      opacity: 0.2
+
+      &::-moz-placeholder
+        color: #1F3F68
+        opacity: 0.2
+
+        &:-ms-input-placeholder
+          color: #1F3F68
+          opacity: 0.2
+
+        &:-moz-placeholder
+          color: #1F3F68
+          opacity: 0.2
+
+    .form__button
+      font-size: 1rem
+      line-height: 1.625rem
+      padding: 1rem 0
+      width: 100%
+
+.disable
+  display: none
+
+@media (max-width: 767.98px)
+  .header__wrapper
+    margin: 0 20px
+
+  .wrapper
+    margin: 0 20px
+
+  .hero
+    .main
+      background: none
+      padding: 0 0 3rem
+
+      .main__hero
+        width: 100%
+        margin-top: 3rem
+
+        .main__header
+          margin-bottom: 1rem
+          font-family: Galien
+          font-size: 2.5rem
+          font-weight: 400
+          line-height: 3rem
+
+        .main__text
+          width: 100%
+          margin-bottom: 1.5rem
+
+  .offer
+    padding: 92px 0 112px
+    display: flex
+    flex-direction: column
+    .offer__left,
+    .offer__right
+      width: 100%
+      display: flex
+      flex-direction: column
+
+    .offer__left
+      .offer__header
+        margin-right: 0
+        margin-bottom: 2rem
+        font-size: 2.25rem
+        font-weight: 700
+        line-height: 3rem
+        letter-spacing: 0.05em
+        color: #316099
+
+    .offer__right .offer__card:first-child
+      margin-bottom: 3rem
+      position: relative
+      .card__image
+        position: absolute
+        top: -1.5rem
+      .card__description
+        padding-top: 218px
+
+    .offer__card
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      margin-left: 0
+      margin-bottom: 3rem
+      padding: 3rem
+
+      .card__image
+        margin-bottom: 3.5rem
+
+  .fb
+    background: #5A98D0
+    border-radius: 200px 0px 0px 0px
+
+    .feedback
+      padding: 5rem 0 4rem
+      .feedback__info
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin-bottom: 3rem
+        .info__header
+          font-size: 2rem
+          margin-right: 0
+          margin-bottom: 1rem
+          padding-left: 1rem
+
+        .info__description
+          margin-right: 0
+          padding: 0 1rem
+          max-width: 100%
+
+      .feedback__client
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-wrap: wrap
+        .client__box
+          white-space: normal
+          text-align: left
+          line-height: 1rem
+          width: 50%
+          border-bottom: 1px solid #ffffff
+          padding: 2rem 2.5rem
+          &:nth-child(odd)
+            border-bottom: 1px solid #ffffff
+            &:nth-child(7n)
+              border-bottom: none
+            &:last-child
+              text-align: center
+              background: rgba(31,63,104, 0.2)
+              button
+                cursor: pointer
+                border: none
+                background: transparent
+                font-weight: 500
+                &:hover
+                  transition: 0.5s
+                  transform: scale(1.05)
+          &:nth-child(even)
+            border-right: none
+            &:last-child
+              border-bottom: none
+          span,
+          button
+            line-height: 1.5rem
+
+  .footer__wrapper
+    margin: 0 20px
+  .footer-background
+    background: #5A98D0
+    .footer
+      margin-right: 3rem
+      .footer__job
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        padding: 3rem 0
+        .job__offer
+          width: 100%
+          display: flex
+          flex-direction: column
+
+          .offer__header
+            margin-bottom: 1rem
+            font-size: 1.5rem
+            font-weight: 500
+            line-height: 2rem
+            letter-spacing: 0.05em
+            color: #ffffff
+          .offer__description
+            margin-bottom: 2rem
+            width: 80%
+            line-height: 1.625rem
+            letter-spacing: 0.05em
+            color: #FFFFFF
+            opacity: 0.6
+
+      .footer__contacts
+        padding: 3rem 0 2rem
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: flex-start
+        flex-wrap: wrap
+
+        .contacts__info,
+        .contacts__about,
+        .contacts__social
+          display: flex
+          flex-direction: column
+
+        .contacts__info
+          width: 100%
+
+        .contacts__about,
+        .contacts__social
+          width: 50%
+
+        .contacts__info
+          margin-right: 0
+          margin-bottom: 1rem
+        .info__header
+          margin-bottom: 1rem
+          img
+            vertical-align: middle
+
+        .contacts__about
+          margin-right: 0
+
+        .about__header,
+        .social__header
+          margin-bottom: 1.5rem
+
+@media (min-width: 768px) and (max-width: 991.98px)
+  .wrapper,
+  .header__wrapper
+    margin: 0 20px
+
+  .hero
+    .main
+      background-size: 60%
+      background-position: right 100%
+
+    .main__hero
+      width: 70%
+
+  .offer
+    padding: 9rem 0 7rem
+    .offer__left
+      .offer__header
+        margin-right: 4rem
+    .offer__card
+      margin-left: 2rem
+    .offer__right .offer__card:first-child
+      margin-bottom: 3rem
+
+  .fb
+    .feedback
+      .feedback__info
+        flex-direction: column
+        align-items: flex-start
+        padding-left: 2rem
+      .feedback__client
+        .client__box
+          white-space: normal
+          span,
+          button
+            line-height: 2rem
+
+  .footer__wrapper
+    margin: 0 20px
 @font-face
   font-family: Gilroy
   font-style: bold
