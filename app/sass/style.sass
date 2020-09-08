@@ -295,7 +295,7 @@ $primary-color: #1F3F68
           letter-spacing: 0.02em
           img
             vertical-align: middle
-        span
+        div
           font-weight: 500
         .info__item
           display: inline-block
@@ -378,31 +378,15 @@ $primary-color: #1F3F68
         font-family: "Gilroy", sans-serif
         line-height: 1.875rem
         outline: none
+        -webkit-appearance: none
         &:last-of-type
           resize: none
-        textarea
 
-    &::-webkit-input-placeholder
-      color: #1F3F68
-      opacity: 0.2
-
-      &::-moz-placeholder
-        color: #1F3F68
-        opacity: 0.2
-
-        &:-ms-input-placeholder
-          color: #1F3F68
-          opacity: 0.2
-
-        &:-moz-placeholder
-          color: #1F3F68
-          opacity: 0.2
-
-    .form__button
-      font-size: 1rem
-      line-height: 1.625rem
-      padding: 1rem 0
-      width: 100%
+      .form__button
+        width: 100%
+        font-size: 1rem
+        line-height: 1.625rem
+        -webkit-appearance: none
 
 .disable
   display: none
@@ -627,26 +611,10 @@ $primary-color: #1F3F68
         &:last-of-type
           resize: none
 
-    &::-webkit-input-placeholder
-      color: #1F3F68
-      opacity: 0.2
-
-      &::-moz-placeholder
-        color: #1F3F68
-        opacity: 0.2
-
-        &:-ms-input-placeholder
-          color: #1F3F68
-          opacity: 0.2
-
-        &:-moz-placeholder
-          color: #1F3F68
-          opacity: 0.2
-
     .form__button
       font-size: 1rem
       line-height: 1.5rem
-      padding: 1rem 0
+      padding: 0.5rem 0
       width: 100%
 @media (min-width: 768px) and (max-width: 991.98px)
   .wrapper,
