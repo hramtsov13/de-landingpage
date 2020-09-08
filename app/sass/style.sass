@@ -235,13 +235,21 @@ $primary-color: #1F3F68
     margin-right: 6rem
     background: #316099
     border-radius: 0px 200px 0px 0px
+
     .footer__job
       display: flex
       justify-content: space-between
       align-items: center
       padding-top: 5.6875rem
       padding-bottom: 6rem
-      border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+      position: relative
+      .footer__border
+        position: absolute
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+        bottom: 0
+        width: 110%
+        left: -10%
+        height: 1px
       .job__offer
         width: 55%
         display: flex
@@ -544,9 +552,9 @@ $primary-color: #1F3F68
 
           .offer__header
             margin-bottom: 1rem
-            font-size: 1.5rem
+            font-size: 1rem
             font-weight: 500
-            line-height: 2rem
+            line-height: 1.5rem
             letter-spacing: 0.05em
             color: #ffffff
           .offer__description
@@ -593,6 +601,53 @@ $primary-color: #1F3F68
         .social__header
           margin-bottom: 1.5rem
 
+  .modal__contact
+    .contact
+      .contact__form
+        padding: 1rem
+        .form__header
+          margin-bottom: 0.5rem
+        .form__item
+          display: flex
+          flex-direction: column
+          margin-bottom: 0.5rem
+          &:last-of-type
+            margin-bottom: 1.5rem
+
+        .form__input
+          width: 15rem
+          padding: 0.5rem 2rem
+          opacity: 0.4
+          border: 1px solid #356EAD
+          box-sizing: border-box
+          border-radius: 10px
+          font-family: "Gilroy", sans-serif
+          line-height: 1.5rem
+          outline: none
+        &:last-of-type
+          resize: none
+
+    &::-webkit-input-placeholder
+      color: #1F3F68
+      opacity: 0.2
+
+      &::-moz-placeholder
+        color: #1F3F68
+        opacity: 0.2
+
+        &:-ms-input-placeholder
+          color: #1F3F68
+          opacity: 0.2
+
+        &:-moz-placeholder
+          color: #1F3F68
+          opacity: 0.2
+
+    .form__button
+      font-size: 1rem
+      line-height: 1.5rem
+      padding: 1rem 0
+      width: 100%
 @media (min-width: 768px) and (max-width: 991.98px)
   .wrapper,
   .header__wrapper
