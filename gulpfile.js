@@ -47,7 +47,13 @@ const compileScript = () => {
 };
 
 const compileStyle = () => {
-  var plugins = [autoprefixer(), cssnano()];
+  var plugins = [
+    autoprefixer({
+      browsers: ["last 3 versions", "> 5%"],
+      cascade: false,
+    }),
+    cssnano(),
+  ];
   return gulp
     .src(["app/sass/style.sass"])
     .pipe(
