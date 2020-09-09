@@ -1,26 +1,28 @@
-*
-  box-sizing: border-box
-  padding: 0
+* 
+  box-sizing: border-box 
+  padding: 0 
   margin: 0
-
 body
   font-family: "Gilroy", sans-serif
   font-size: 16px
   font-weight: 400
 
 $primary-color: #1F3F68
+$white-color: #ffffff
+$background-blue: #5A98D0
 
 //common components
 
 .button
+  font-family: "Gilroy", sans-serif
   cursor: pointer
   padding: 15px 48px
-  background: #5A98D0
+  background: $background-blue
   box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2)
   border-radius: 10px
   border: none
-  font-size: 16px
-  color: #fff
+  font-size: 1rem
+  color: $white-color
   text-align: center
   letter-spacing: 0.04em
   &:hover
@@ -48,12 +50,12 @@ $primary-color: #1F3F68
 
   .logo__image
     width: 3rem
-    height: 2rem
+    height: 3rem
 
   .burger__button
     cursor: pointer
-    width: 1.5rem
-    height: 1rem
+    width: 2rem
+    height: 2rem
 
 //main section
 .hero
@@ -70,11 +72,11 @@ $primary-color: #1F3F68
   .main__hero
     width: 60%
     .main__header
-      margin-bottom: 32px
+      margin-bottom: 2rem
       font-family: Galien
-      font-size: 64px
-      font-weight: 400
-      line-height: 74px
+      font-size: 4rem
+      font-weight: 700
+      line-height: 4.625rem
       letter-spacing: 0.04em
       color: $primary-color
 
@@ -102,7 +104,7 @@ $primary-color: #1F3F68
       margin-bottom: 158px
       font-size: 2.25rem
       font-weight: 700
-      line-height: 46px
+      line-height: 2.875rem
       letter-spacing: 0.05em
       color: #316099
 
@@ -120,9 +122,9 @@ $primary-color: #1F3F68
     flex-direction: column
     justify-content: center
     align-items: center
-    margin-left: 100px
-    padding: 48px
-    background: #FFFFFF
+    margin-left: 6.25rem
+    padding: 3rem
+    background: $white-color
     box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2)
     border-radius: 10px
 
@@ -137,13 +139,13 @@ $primary-color: #1F3F68
         font-weight: 500
         line-height: 1.875rem
         letter-spacing: 0.05em
-        color: #1F3F68
+        color: $primary-color
 
       .description__text
         margin-bottom: 2rem
         line-height: 1.625rem
         letter-spacing: 0.05em
-        color: #1F3F68
+        color: $primary-color
         opacity: 0.6
 
       .description__button
@@ -152,11 +154,11 @@ $primary-color: #1F3F68
         line-height: 1.875rem
         letter-spacing: 0.05em
         font-weight: 700
-        color: #5A98D0
+        color: $background-blue
         position: relative
         &::after
           bottom: 0
-          right: -28px
+          right: -1.75rem
           position: absolute
           content: ""
           background: url("../img/offer/arrow.svg") no-repeat
@@ -167,25 +169,25 @@ $primary-color: #1F3F68
           color: #3179b8
 
 .fb
-  background: #5A98D0
+  background: $background-blue
   border-radius: 200px 0px 0px 0px
 
   .feedback
-    padding: 96px 0 125px
+    padding: 6rem 0 7.8125rem
     .feedback__info
       display: flex
       margin-bottom: 6.9375rem
       .info__header
         margin-right: 87px
-        color: #FFFFFF
+        color: $white-color
         font-weight: 500
         font-size: 2.25rem
         line-height: 2.875rem
         letter-spacing: 0.05em
       .info__description
-        margin-right: 80px
+        margin-right: 5rem
         max-width: 540px
-        color: #FFFFFF
+        color: $white-color
         opacity: 0.6
         line-height: 1.625rem
         letter-spacing: 0.05em
@@ -199,10 +201,10 @@ $primary-color: #1F3F68
       .client__box
         white-space: nowrap
         width: 25%
-        border-right: 1px solid #ffffff
+        border-right: 1px solid $white-color
         padding: 41px 46px
         &:nth-child(-n+4)
-          border-bottom: 1px solid #ffffff
+          border-bottom: 1px solid $white-color
         &:nth-child(4n)
           border-right: none
         &:last-child
@@ -230,7 +232,7 @@ $primary-color: #1F3F68
   margin: 0 auto
 
 .footer-background
-  background: #5A98D0
+  background: $background-blue
   .footer
     margin-right: 6rem
     background: #316099
@@ -245,10 +247,10 @@ $primary-color: #1F3F68
       position: relative
       .footer__border
         position: absolute
-        border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+        border-bottom: 1px solid rgba(255, 255, 255,0.4)
         bottom: 0
-        width: 110%
-        left: -10%
+        width: 200%
+        left: -100%
         height: 1px
       .job__offer
         width: 55%
@@ -261,11 +263,11 @@ $primary-color: #1F3F68
           font-weight: 500
           line-height: 2.875rem
           letter-spacing: 0.05em
-          color: #ffffff
+          color: $white-color
         .offer__description
           line-height: 1.625rem
           letter-spacing: 0.05em
-          color: #FFFFFF
+          color: $white-color
           opacity: 0.6
       .job__button
         padding: 0.9375rem 4.625rem
@@ -275,10 +277,10 @@ $primary-color: #1F3F68
       display: flex
       justify-content: flex-start
       align-items: flex-start
-      color: #FFFFFF
+      color: $white-color
 
       a
-        color: #ffffff
+        color: $white-color
         text-decoration: none
       .contacts__info,
       .contacts__about,
@@ -321,6 +323,13 @@ $primary-color: #1F3F68
         &:hover
           color: rgba(255, 255, 255, 0.6)
 
+    .footer__copyright 
+      padding-bottom: 4rem
+      .copyright__info
+      line-height: 1.625rem
+      letter-spacing: 0.05em
+      color: $white-color
+      opacity: 0.4
 //modal
 
 .modal__contact
@@ -346,14 +355,14 @@ $primary-color: #1F3F68
       align-items: flex-start
       padding: 2rem
       border-radius: 8px
-      background-color: #ffffff
+      background-color: $white-color
 
       .form__header
         margin-bottom: 1.5rem
         font-size: 1.25rem
         line-height: 1.875rem
         letter-spacing: 0.04em
-        color: #1F3F68
+        color: $primary-color
 
       .form__item
         display: flex
@@ -363,7 +372,7 @@ $primary-color: #1F3F68
           margin-bottom: 2.5rem
 
       & label
-        color: #1F3F68
+        color: $primary-color
         line-height: 1.875rem
         opacity: 0.8
         margin-bottom: 0.5rem
@@ -409,7 +418,6 @@ $primary-color: #1F3F68
 
         .main__header
           margin-bottom: 1rem
-          font-family: Galien
           font-size: 2.5rem
           font-weight: 400
           line-height: 3rem
@@ -460,7 +468,7 @@ $primary-color: #1F3F68
         margin-bottom: 3.5rem
 
   .fb
-    background: #5A98D0
+    background: $background-blue
     border-radius: 200px 0px 0px 0px
 
     .feedback
@@ -492,10 +500,10 @@ $primary-color: #1F3F68
           text-align: left
           line-height: 1rem
           width: 50%
-          border-bottom: 1px solid #ffffff
+          border-bottom: 1px solid $white-color
           padding: 2rem 2.5rem
           &:nth-child(odd)
-            border-bottom: 1px solid #ffffff
+            border-bottom: 1px solid $white-color
             &:nth-child(7n)
               border-bottom: none
             &:last-child
@@ -520,7 +528,7 @@ $primary-color: #1F3F68
   .footer__wrapper
     margin: 0 20px
   .footer-background
-    background: #5A98D0
+    background: $background-blue
     .footer
       margin-right: 3rem
       .footer__job
@@ -540,13 +548,13 @@ $primary-color: #1F3F68
             font-weight: 500
             line-height: 1.5rem
             letter-spacing: 0.05em
-            color: #ffffff
+            color: $white-color
           .offer__description
             margin-bottom: 2rem
             width: 80%
             line-height: 1.625rem
             letter-spacing: 0.05em
-            color: #FFFFFF
+            color: $white-color
             opacity: 0.6
 
       .footer__contacts
@@ -669,13 +677,12 @@ $primary-color: #1F3F68
 
 @font-face
   font-family: Gilroy
-  font-style: semibold
-  font-weight: 500
+  font-weight: 600
   src: url("./../fonts/Gilroy/Gilroy-SemiBold.ttf")
 
 @font-face
   font-family: Gilroy
-  font-style: light
+
   font-weight: 300
   src: url("./../fonts/Gilroy/Gilroy-Light.ttf")
 

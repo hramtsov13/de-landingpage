@@ -13,18 +13,23 @@ var gulp = require("gulp"),
 const buildMarkup = () => {
   return gulp.src("app/*.html").pipe(gulp.dest("docs"));
 };
+
 const buildScript = () => {
   return gulp.src(["app/js/scripts.min.js"]).pipe(gulp.dest("docs/js"));
 };
+
 const buildStyle = () => {
   return gulp.src(["app/css/style.min.css"]).pipe(gulp.dest("docs/css"));
 };
+
 const buildFonts = () => {
   return gulp.src(["app/fonts/**/*"]).pipe(gulp.dest("docs/fonts"));
 };
+
 const buildImage = () => {
   return gulp.src(["app/img/**/*"]).pipe(gulp.dest("docs/img"));
 };
+
 const removeDocs = () => {
   return del("docs");
 };
@@ -34,6 +39,7 @@ const compileScript = () => {
   return gulp
     .src([
       // here add js libs
+
       "app/js/script.js",
     ])
     .pipe(concat("scripts.min.js"))
@@ -54,6 +60,7 @@ const compileStyle = () => {
     }),
     cssnano(),
   ];
+
   return gulp
     .src(["app/sass/style.sass"])
     .pipe(
@@ -77,6 +84,7 @@ const startServer = (done) => {
     server: {
       baseDir: "app",
     },
+
     port: 3000,
   });
   done();
@@ -94,10 +102,12 @@ const watchMarkup = (done) => {
   gulp.watch("app/*.html", gulp.series(reload));
   done();
 };
+
 const watchScript = (done) => {
   gulp.watch("app/js/script.js", gulp.series(compileScript));
   done();
 };
+
 const watchStyle = (done) => {
   gulp.watch("app/sass/*.sass", gulp.series(compileStyle)); //последовательно
   done();

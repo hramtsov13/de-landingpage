@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Start template for html/css/js site",
   "main": "index.html",
-  "author": "Daniil Chervyakov",
+  "author": "Mikhail Khramtsov",
   "license": "ISC",
   "scripts": {
     "start": "gulp",
