@@ -3,6 +3,7 @@
   padding: 0 
   margin: 0
 body
+  font-display: swap
   font-family: "Gilroy", sans-serif
   font-size: 16px
   font-weight: 400
@@ -118,10 +119,7 @@ $background-blue: #5A98D0
       padding-top: 218px
 
   .offer__card
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    display: block
     margin-left: 6.25rem
     padding: 3rem
     background: $white-color
@@ -130,6 +128,11 @@ $background-blue: #5A98D0
 
     .card__image
       margin-bottom: 3.5rem
+      img
+        display: inline-block
+        margin-left: 50%
+        transform: translateX(-50%)
+        
 
     .card__description
 
@@ -209,6 +212,7 @@ $background-blue: #5A98D0
           border-right: none
         &:last-child
           text-align: center
+          font-family: "Gilroy", sans-serif
           background: rgba(31,63,104, 0.2)
           button
             cursor: pointer
@@ -671,8 +675,8 @@ $background-blue: #5A98D0
 @font-face
   font-family: Gilroy
   font-style: normal
+  font-display: swap
   font-weight: 400
-  font-display: fallback
   src: url("./../fonts/Gilroy/Gilroy-Regular.ttf")
 
 @font-face
@@ -682,7 +686,6 @@ $background-blue: #5A98D0
 
 @font-face
   font-family: Gilroy
-
   font-weight: 300
   src: url("./../fonts/Gilroy/Gilroy-Light.ttf")
 
